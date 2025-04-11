@@ -10,6 +10,7 @@ Windows 11 Machine (LimaCharlie setup)
 ![artifact collection](https://github.com/user-attachments/assets/4dc17047-fc61-4c7a-b00d-14ba9cda5897)
 #
 Ubuntu Server Machine(Sliver C2)
+
 We download Sliver and then run "Systemctl status Sliver" to make sure its live.
 ![sliver setup](https://github.com/user-attachments/assets/f2066c80-b2d9-4655-9c60-e52b505392f4)
 ![launch sliver](https://github.com/user-attachments/assets/a2186a1a-acc1-49de-939d-104bae5d21be)
