@@ -5,6 +5,6 @@ The first step in this lab is to configure both virtual machines. The attack mac
 #
 Windows 11 Machine (LimaCharlie setup)
 ![charlielimasetup](https://github.com/user-attachments/assets/1fc8b45c-4031-46ee-96a1-35d691885f67)
-Now we configure the sensors and add our rules.
+ Now we configure the sensors and add our rules.
 ![sensor creation](https://github.com/user-attachments/assets/3b4d7114-6d81-493c-aa12-4fa2ca19a983)
 ![artifact collection](https://github.com/user-attachments/assets/4dc17047-fc61-4c7a-b00d-14ba9cda5897)
