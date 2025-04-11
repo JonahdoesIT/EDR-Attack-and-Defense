@@ -49,3 +49,30 @@ We can also leverage LimaCharlie to scan the payload hash using VirusTotal. Whil
 ![hash not found](https://github.com/user-attachments/assets/2de3f09a-af4c-4a00-b34c-552f4d4743d0)
 #
 Next, on the attack machine, we simulate a credential theft attempt by dumping the LSASS memory. Using LimaCharlie, we can monitor sensor activity, review detailed telemetry from the endpoint, and begin crafting detection rules to identify and flag this type of sensitive behavior in real-time.
+![simulate attack](https://github.com/user-attachments/assets/f3c8ec23-b3d7-4116-854d-519da684339d)
+![lsass dump](https://github.com/user-attachments/assets/456941be-e4fb-446c-920c-cdf33717fde8)
+#
+Back in LimaCharlie we can see the dump was successful. Now lets build a detection rule from the event 
+![successful dump](https://github.com/user-attachments/assets/bb9a91c2-8a0f-4792-bdcc-99bbc8b2b742)
+
+![lsass detection](https://github.com/user-attachments/assets/4a9716e7-cf53-4eeb-a384-20a2b1f4627e)
+
+![build detection rule from event](https://github.com/user-attachments/assets/e0093537-d7ae-4d4e-81b4-2a9893b287a5)
+
+![detection rules](https://github.com/user-attachments/assets/acba9498-f77f-4ace-8151-b8617388138c)
+
+Now we run a quick test on the event to make sure its firing.
+
+![test detecion success](https://github.com/user-attachments/assets/13f5ba61-23b7-4d0e-acf0-46ba1daf3c1f)
+#
+Now when we run the payload again to see the if the new detection rule works
+![detection success!](https://github.com/user-attachments/assets/81118b70-5bf3-4e11-8cef-cab4fc57258e)
+
+![detection sucess 2](https://github.com/user-attachments/assets/66ac153c-c401-433f-8edc-de24ee29eec4)
+#
+Moving beyond basic detection, we can now use LimaCharlie to create a rule that both detects and blocks attacks originating from the Sliver server. On the Ubuntu machine, we simulate part of a ransomware attack by attempting to delete volume shadow copies — a common tactic used to prevent file recovery. LimaCharlie captures this behavior in its telemetry, allowing us to craft a defensive rule that blocks the attack in real time. Once deployed, the rule effectively stops the Ubuntu machine from executing the same attack again, demonstrating proactive threat prevention in action.
+![CREATE SHELL](https://github.com/user-attachments/assets/03e8f37e-5cee-417c-91fb-742208f33676)
+![detection final](https://github.com/user-attachments/assets/6320359f-8604-4898-9ae7-0df272411384)
+![final detection rule](https://github.com/user-attachments/assets/a9023423-9d01-4994-8055-f8f7f79b0750)
+![detection rule works!](https://github.com/user-attachments/assets/1ab3c496-c123-4661-ae0a-0ee2e215fdc4)
+![DONE!](https://github.com/user-attachments/assets/e0a2bbb7-d566-4c59-8541-e1277058526e)
