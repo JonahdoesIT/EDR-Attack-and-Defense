@@ -1,4 +1,4 @@
 # EDR-Attack-and-Defense
 This lab project is focused on simulating a realistic cyber attack and evaluating endpoint detection and response (EDR) capabilities. Following Eric Capuano’s online guide, I’ve set up virtual machines to represent both attacker and victim environments. The attacker machine uses the Sliver C2 framework to carry out the attack, while the target Windows endpoint is monitored using LimaCharlie as the EDR solution.
 # Setup
-
+The first step in this lab is to configure both virtual machines. The attack machine will run Ubuntu Server, while the target endpoint will be a Windows 11 system. To ensure smooth execution of the lab, Microsoft Defender and other relevant protections on the Windows machine should be temporarily disabled. On the Ubuntu machine, I’ll be installing Sliver, which will serve as the primary command and control (C2) framework for the simulated attacks. Meanwhile, the Windows endpoint will be equipped with LimaCharlie as the EDR solution. A LimaCharlie sensor will be deployed on the Windows machine and configured to ingest telemetry, including detailed Sysmon logs, for monitoring and response.
